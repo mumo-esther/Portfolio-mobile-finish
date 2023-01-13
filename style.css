@@ -1,3 +1,198 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("./images/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 60%;
+  background-color: rgb(255, 255, 255);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 8%;
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #28352f;
+}
+
+.nav-list {
+  margin: auto;
+  justify-content: space-around;
+  list-style: none;
+  padding: 10px 10px;
+  display: inline-flex;
+  column-gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: black;
+  font-size: 15px;
+}
+
+nav ul li a:hover {
+  color: green;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: green;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border: 2px, solid transparent;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: transform 0.4s;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 1300px;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 0.37px;
+  color: #172b4d;
+}
+
+.headline h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 35px;
+  padding: 0.1px;
+  text-align: center;
+  letter-spacing: 0.37px;
+  color: rgb(6, 202, 137);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.supporting-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.37px;
+  color: #172b4d;
+  max-width: 500px;
+}
+
+.socialmedia {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  column-gap: 25px;
+  justify-content: center;
+  padding: 0.5rem;
+  height: 50px;
+}
+
+.disabled {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  background: #ffff;
+}
+
+.socialmedia:hover {
+  color: green;
+}
+
+.hambuger-btn {
+  display: block;
+  font-size: 22px;
+  font-weight: 100px;
+  color: black;
+  float: right;
+  line-height: 70px;
+  margin-right: 20px;
+  cursor: pointer;
+  padding-top: 40px;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    height: 100vh;
+    background-color: gray;
+  }
+
+  .hambuger-btn {
+    position: relative;
+    height: 100px;
+    background-color: none;
+    float: right;
+  }
+
+  .hero {
+    height: 100vh;
+    background-image: url("./images/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 60%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .disabled {
+    position: relative;
+  }
+
+  .hero {
+    height: 100vh;
+    background-image: url("./images/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 60%;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+@media (min-width: 700px) {
+  .hambuger-btn {
+    display: none;
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
 html,
@@ -17,18 +212,6 @@ body {
   font-family: inter, sans-serif;
 }
 
-/* Tipography */
-h1 {
-  font-family: inter, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 52px;
-  color: #172b4d;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 span {
   color: var(--color-primary);
 }
@@ -38,20 +221,7 @@ img {
   display: block;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 0 8px;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
+.button1 {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   border: none;
@@ -64,6 +234,21 @@ button {
   padding: 1em 1.5em;
   color: white;
   border-radius: 3px;
+}
+
+.button2 {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: none;
+  width: fit-content;
+  align-self: center;
+  background: var(--color-primary);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: white;
+  border-radius: 3px;
+  padding: 0.5em 1em;
 }
 
 button:hover {
@@ -95,6 +280,11 @@ button:active {
   column-gap: 2rem;
   width: 90%;
   margin: 0 auto;
+  margin-top: 40px;
+}
+
+.about-myself h1 {
+  display: inline-block;
 }
 
 .works h1:first-child {
@@ -210,6 +400,10 @@ button:active {
   flex-direction: row;
 }
 
+.card-title {
+  margin-bottom: -15px;
+}
+
 .card-tags-mobile {
   list-style: none;
   padding: 0;
@@ -266,17 +460,16 @@ button:active {
 }
 
 .about-myself {
-  margin-top: 2em;
-
-  /* prettier-ignore */
-  background: url("./assest/illustration_1-about_me-mobile.svg") no-repeat 100% 0%, url("./assest/illustration_2-about_me_mobile.svg") no-repeat 0 300px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2em;
 }
 
 .about-myself p {
-  font-size: 20px;
+  font-size: 17px;
   color: #42526e;
+  font-weight: 900px;
 }
 
 .categorie-about-myself {
@@ -352,16 +545,11 @@ button:active {
 }
 
 @media screen and (max-width: 767px) {
-  .headline h1,
-  .headline p .social-media {
-    margin-top: 100px;
-  }
-
   .about-myself {
     background:
-      url("./images/frame5.png") no-repeat 0% 15%,
+      url("./images/frame5.png") no-repeat 0% 20%,
       url("./images/frame4.png") no-repeat 100% 0%;
-    background-size: 130px, 130px;
+    background-size: 100px, 100px;
   }
 
   .categorie-about-myself {
